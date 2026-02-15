@@ -1,4 +1,4 @@
-/* FULL PAGE BACKGROUND */
+
 .home-container{
   position: relative;
   min-height:100vh;
@@ -12,8 +12,6 @@
   background-position:center;
   background-repeat:no-repeat;
 }
-
-/* DARK OVERLAY (THIS FIXES INVISIBLE TEXT) */
 .overlay{
   position:absolute;
   top:0;
@@ -23,16 +21,12 @@
   background:rgba(5,10,25,0.75);
   z-index:0;
 }
-
-/* CONTENT ABOVE BACKGROUND */
 .home-content{
   position:relative;
   z-index:2;
   color:white;
   max-width:900px;
 }
-
-/* HEADING */
 .home-content h1{
   font-size:58px;
   font-weight:900;
@@ -43,14 +37,11 @@
   color:#ff5439;
 }
 
-/* SUBTEXT */
 .home-content p{
   margin-top:15px;
   font-size:22px;
   opacity:0.9;
 }
-
-/* BUTTON */
 .start-btn{
   margin-top:40px;
   padding:18px 38px;
@@ -68,8 +59,6 @@
   transform:scale(1.08);
   box-shadow:0 0 25px rgba(255,0,0,0.6);
 }
-
-/* FEATURES SECTION */
 .features{
   position:relative;
   z-index:2;
@@ -78,8 +67,6 @@
   color:white;
   margin-bottom: 1rem;
 }
-
-/* FEATURES HEADING BOX */
 .features h2{
   display:inline-block;
   padding:25px 38px;
@@ -90,15 +77,12 @@
   box-shadow:0 0 20px rgba(0,255,255,0.25);
   margin-top: 5px;
 }
-
-/* GRID */
 .feature-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:30px;
 }
 
-/* CARDS */
 .feature-card{
   padding:25px;
   border-radius:16px;

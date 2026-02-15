@@ -6,7 +6,6 @@
   color:white;
   min-height:100vh;
 }
-
 textarea{
   width:70%;
   height:200px;
@@ -16,7 +15,6 @@ textarea{
   font-size:15px;
   outline:none;
 }
-
 .analyse-btn{
   padding:14px 34px;
   border:none;
@@ -28,20 +26,15 @@ textarea{
   cursor:pointer;
   transition: all 0.25s ease;
 }
-
-/* hover effect */
 .analyse-btn:hover{
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(0, 213, 255, 0.7),
               0 0 40px rgba(0, 247, 255, 0.5);
 }
-
-/* click effect */
 .analyse-btn:active{
   transform: scale(0.95);
   box-shadow: 0 0 10px rgba(0, 153, 255, 0.9);
 }
-
 
 .output{
   margin-top:25px;

@@ -10,14 +10,11 @@ export default function Home() {
       className="home-container"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {/* DARK OVERLAY */}
       <div className="overlay"></div>
-
       <div className="home-content">
         <h1>Find & Fix Issues <br/> in Your <span>CI/CD Pipeline</span>
         </h1>
         <p>Automatically detect and solve CI/CD pipeline errors.</p>
-
         <button
           className="start-btn"
           onClick={() => navigate("/debugger")}
@@ -26,7 +23,6 @@ export default function Home() {
         </button>
       </div>
 
-      {/* FEATURES */}
       <div className="features">
         <h2>Why use CI/CD Debugger?</h2>
 
@@ -40,7 +36,6 @@ export default function Home() {
             <h3>🤖 AI Solutions</h3>
             <p>Get instant debugging suggestions.</p>
           </div>
-
           <div className="feature-card">
             <h3> ⚡Fast Debugging</h3>
             <p>Fix errors quickly and save time.</p>
