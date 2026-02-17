@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.clj-kondo/
+node_modules/
+dist/
+

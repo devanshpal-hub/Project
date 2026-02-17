@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../pages/Debugger.css";
+import "./Debugger.css";
 
 export default function Debugger() {
   const [log, setLog] = useState("");
