@@ -1,35 +1,54 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Debugger.css";
 
 export default function Debugger() {
-  const [log, setLog] = useState("");
-  const [result, setResult] = useState("");
+
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState([]);
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
   const analyzeLog = () => {
-    if (log.includes("npm install")) {
-      setResult("Dependency issue detected. Run: npm install");
-    } 
-    else if (log.includes("permission denied")) {
-      setResult("Permission error. Try running terminal as administrator.");
+
+    if (input.trim() === "") {
+      alert("Please paste your error/problem first!");
+      return;
     }
-    else {
-      setResult("No known issue detected. Please check YAML configuration.");
-    }
+    //ai
+    const userMessage = { type: "user", text: input };
+    const aiMessage = {
+      role:"user" | "ai" | "error",
+      text: "Analyzing your CI/CD error...\n\nPossible Reason:\nYour pipeline is failing due to dependency installation or wrong environment variable.\n\nSuggested Fix:\n1. Check package installation step\n2. Verify Node version\n3. Re-run pipeline"
+    };
+
+    setMessages(prev => [...prev, userMessage, aiMessage]);
+    setInput("");
   };
 
   return (
-    <div className="debugger-page">
-       <h2>Paste Your CI/CD Error Logs</h2>
-
-      <textarea
-        placeholder="Paste Jenkins, GitHub Actions, Docker, or build error logs here..."
-        value={log}
-        onChange={(e) => setLog(e.target.value)}
-      />
-     <button className="analyse-btn" onClick={analyzeLog}>Analyze</button>
-      <div className="output">
-        <h3>Solutions</h3>
-        <p>{result}</p>
+    <div className="chat-container">
+      <div className="chat-messages">
+        {messages.map((msg, index) => (
+          <div key={index} className={`message ${msg.type}`}>
+            <pre>{msg.text}</pre>
+          </div>
+        ))}
+        <div ref={chatEndRef}></div>
       </div>
+      <div className="chat-input">
+        <textarea
+          placeholder="Paste your CI/CD error or problem here..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+
+        <button className="send-btn" onClick={analyzeLog}>
+          Analyze
+        </button>
+      </div>
+
     </div>
   );
 }
