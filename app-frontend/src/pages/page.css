@@ -1,0 +1,38 @@
+.page {
+  min-height: 100vh;
+  padding: 120px 40px 60px;
+  color: white;
+
+  background: linear-gradient(
+      rgba(8,12,25,0.92),
+      rgba(8,12,25,0.95)
+    ),
+    url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(15, 20, 40, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    0 0 20px rgba(0,200,255,0.15),
+    0 0 50px rgba(0,120,255,0.12);
+}
+.page h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.page p {
+  line-height: 1.7;
+  color: #d1d5db;
+  font-size: 19px;
+}
