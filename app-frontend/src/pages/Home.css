@@ -1,0 +1,118 @@
+
+.home-container{
+  position: relative;
+  min-height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(5,10,25,0.75);
+  z-index:0;
+}
+.home-content{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:900px;
+}
+.home-content h1{
+  font-size:58px;
+  font-weight:900;
+  line-height:1.2;
+  margin-top: 15px;
+}
+.home-content span{
+  color:#ff5439;
+}
+
+.home-content p{
+  margin-top:15px;
+  font-size:22px;
+  opacity:0.9;
+}
+.start-btn{
+  margin-top:40px;
+  padding:18px 38px;
+  font-size:27px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#ff3d3a,#ff0000);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  margin-bottom: 30px;
+}
+
+.start-btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 25px rgba(255,0,0,0.6);
+}
+.features{
+  position:relative;
+  z-index:2;
+  margin-top:15px;
+  padding:40px;
+  color:white;
+  margin-bottom: 1rem;
+}
+.features h2{
+  display:inline-block;
+  padding:25px 38px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(6px);
+  margin-bottom:60px;
+  box-shadow:0 0 20px rgba(0,255,255,0.25);
+  margin-top: 5px;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.feature-card{
+  padding:25px;
+  border-radius:16px;
+  background:rgba(10,15,30,0.8);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.12);
+  transition:0.35s;
+  margin-bottom: 40px;
+  margin-top: 1px;
+
+  box-shadow:
+    0 0 8px rgba(0,247,255,0.25),
+    0 0 18px rgba(0,140,255,0.25),
+    0 0 35px rgba(0,247,255,0.18);
+}
+
+.feature-card:hover{
+  transform:translateY(-8px);
+  border-color:#38bdf8;
+  box-shadow:
+    0 0 12px rgba(0,247,255,0.45),
+    0 0 28px rgba(0,140,255,0.45),
+    0 0 60px rgba(0,247,255,0.35);
+}
+
+.feature-card h3{
+  margin-bottom:15px;
+}
+
+.feature-card p{
+  color:#cbd5e1;
+  font-size:15px;
+}
